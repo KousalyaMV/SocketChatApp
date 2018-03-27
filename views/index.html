@@ -1,0 +1,56 @@
+<html>
+<head>
+      <title>Socket Chat App</title>
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="/css/style.css"/>
+</head>
+	<body>     
+    <div class="container" id="nickname-container">
+        <h1>Choose a nickname!</h1>
+        <span id="nick-error"></span>
+        <form id="choose-nickname">
+            <input type="text" id="nickname" autocomplete="off" placeholder="Enter nickname to join chat"></input>
+        </form>
+    </div>
+
+    <div class="container" id="chat-container">
+		<div class="row">
+		    <div id="userLog" class="col-md-4">
+			    <h4>User Name<h4>
+			</div>
+		</div>
+        <div class="row">
+            <div id="users" class="col-md-4">
+                <h2>Active Users</h2>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-4" id="chat-col">
+                <div class="row" id="room"><h2>Group Chat</h2></div>
+                <div class="row" id="chat">
+                </div>
+                <div class="row">
+                    <form id="send-message">
+                        <input type="text" id="new-message" autocomplete="off" placeholder="Enter message and press enter"></input>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4" id="pm-col">
+                <div class="row" id="user-to-pm"><h2>Private Chat</h2></div>
+                <div class="row" id="private-chat">
+
+                </div>
+                <div class="row">
+                    <form id="send-pm">
+                        <input type="text" id="new-pm" autocomplete="off" placeholder="Enter message and press enter"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="http://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/chat-ui.js"></script>
+</body>
+</html>
